@@ -55,8 +55,12 @@ export default {
     align-items: center;
     margin:0;
     padding:30px;
+    height: 100vh;
     width: 100%;
     background-image: url('../assets/heroimage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 0%;
   }
 
 </style>

@@ -18,6 +18,7 @@ name: 'SearchInput',
 <style lang="scss" scoped>
 
  .searchWrapper{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -26,6 +27,7 @@ name: 'SearchInput',
         text-align: center;
         height: 30px;
         border:0;
+        background: none;
         border-bottom: 1px solid black;
       }
   }
