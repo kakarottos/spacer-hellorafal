@@ -1,16 +1,15 @@
 <template>
   <div class="app">
-    <div class="nav">
-      <router-link to="/">Spacer</router-link>
-      <router-link to="/About">About</router-link>
-    </div>
-
     <router-view />
-
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" >
+*{
+  box-sizing: border-box;
+}
 
-
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
 </style>
