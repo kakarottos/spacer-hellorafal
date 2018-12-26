@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="claimWrapper">
     <h1 class="Claim">Spacer</h1>
     <p class="subclaim">
         begin your journey through our amazing galaxy.
@@ -19,12 +19,21 @@ export default {
 
 <style lang="scss" scoped>
 
-.wrapper{
+.claimWrapper{
     display: flex;
     flex-direction: column;
+    justify-content: center;  
     align-items: center;
+    text-align: center;
+    }
+
+.Claim{
     margin:0;
-    padding:30px;
-    width: 100%;
-  }
+    font-size: 50px;
+}
+
+.subclaim{
+    font-size: 13px;
+    margin:20px 0 0 0 ;
+}
 </style>
