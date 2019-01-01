@@ -2,9 +2,9 @@
      <div class="searchWrapper">
       <input 
         id="search" name="search" 
-        v-model="searchValue"
         placeholder="Put text" 
-        @input="handleInput"
+        :value="value"
+        @input="handleChange"
         />
   
     </div>
@@ -13,6 +13,17 @@
 <script>
 export default {
 name: 'SearchInput',
+props: {
+  value: {
+    type:String,
+    required:true,
+    }
+  },
+methods:{
+  handleChange(e){
+    this.$emit('input',e.target.value)
+  },
+}
 }
 </script>
 <style lang="scss" scoped>
@@ -24,11 +35,20 @@ name: 'SearchInput',
     width: 300px;
 
       input{
+        font-size: 20px;
+        color:white;
         text-align: center;
         height: 30px;
         border:0;
         background: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid white;
+        transition: box-shadow 0.5s;
+
+      }
+
+      input:focus{
+        outline:none;
+        box-shadow: 0 20px 20px -10px white;
       }
   }
 
