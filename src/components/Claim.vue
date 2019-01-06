@@ -22,7 +22,7 @@ export default {
 .claimWrapper{
     display: flex;
     flex-direction: column;
-    justify-content: center;  
+    justify-content: center;
     align-items: center;
     text-align: center;
     color:white;
@@ -31,7 +31,6 @@ export default {
 .Claim{
     margin:0;
     font-size: 50px;
-    
     @media (min-width: 768px) {
         font-size: 80px;
     }
@@ -42,13 +41,11 @@ export default {
     font-size: 13px;
     margin:20px 0 0 0;
     font-weight: 400;
-    
     @media (min-width: 768px) {
         font-size: 17px;
         letter-spacing: 1px;
         line-height: 1px;
         width: 600px;
-
     }
 
 }
