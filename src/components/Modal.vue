@@ -6,9 +6,6 @@
       </div>
       <div class="description">
         <h2 class="title">{{ title }}</h2>
-        <p class="description">
-          {{ description }}
-        </p>
       </div>
     </div>
     <div class="close" @click="$emit('closeModal')" />
@@ -33,7 +30,6 @@ export default {
   mounted() {
     this.photo = this.item.links[0].href;
     this.title = this.item.data[0].title;
-    this.description = this.item.data[0].description.substring(0, 200);
   },
 };
 </script>
@@ -48,6 +44,16 @@ export default {
     @media (min-width: 1024px) {
       max-width: 70%;
       height: 60%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      box-shadow: 0 30px 30px -10px rgba(0,0,0, .3);
+    }
+    @media (min-width: 768px) {
+      max-width: 50%;
+      height: 35%;
       left: 0;
       right: 0;
       top: 0;
@@ -89,21 +95,23 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @media (min-width: 1024px) {
+   
+    .photo {
+      width: 100%;
+      height: auto;
+      background: black;
+      img {
+        width: 50%;
+      }
+    }
+     @media (min-width: 768px) {
       flex-direction: row;
       .photo {
         min-width: 50%;
         margin-right: 20px;
       }
     }
-    .photo {
-      width: 100%;
-      height: auto;
-      background: black;
-      img {
-        width: 100%;
-      }
-    }
+  
     .description {
       color: #333;
     }
